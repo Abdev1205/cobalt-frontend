@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coablt Task
+
+This is the frontend for the Coablt Task that include Slack messaging and google auth feature. The project is built using Next.js and interacts with a backend API.
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 16 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ## Getting Started
 
-First, run the development server:
+### Clone the Repository
+
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/Abdev1205/cobalt-frontend.git
+cd your-repo-name
+```
+
+### Install Dependencies
+
+Install the project dependencies using npm or yarn:
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn install
+```
+
+### Setup Environment Variables
+
+Create a `.env.local` file in the root directory of the project and add the following line:
+
+```
+NEXT_PUBLIC_API_URL=http://localhost:4000
+```
+
+This environment variable is used to define the base URL of the backend API. Adjust the value as needed for your setup.
+
+### Running the Project
+
+To run the project in development mode, use the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This will start the Next.js development server and your application will be available at `http://localhost:3000`.
 
-## Learn More
+### Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+To build the project for production, use the following command:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+or
 
-## Deploy on Vercel
+```bash
+yarn build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+After building, you can start the production server with:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm start
+```
+
+or
+
+```bash
+yarn start
+```
+
+## Project Structure
+
+- `pages/`: Contains the Next.js pages.
+- `components/`: Contains reusable React components.
+- `hooks/`: Contains custom hooks including `useSlackMessages` `useSession`.
+- `public/`: Contains public assets like images.
+- `styles/`: Contains CSS and SCSS files.
+- `utils/`: Contains utility functions and configurations.
+
+## Using the Application
+
+### Sending Messages
+
+You can send messages to Slack by typing in the input field and either clicking the "Send" button or pressing the Enter key.
+
+### Viewing Messages
+
+Messages from Slack will be displayed in reverse chronological order, with the newest messages at the bottom. The view will automatically scroll to the latest message when new messages are received.
+
+### Demo
+
+https://www.loom.com/share/8ffd88984f24439eba6161bf94d6ce4c?sid=60e4602c-8405-46ff-8448-add265d92c98
