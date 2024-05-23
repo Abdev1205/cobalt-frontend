@@ -16,7 +16,6 @@ import { nunitoSans } from '@/public/fonts.js';
 const Profile = () => {
   const { user, loading, loggedIn, logout } = useSession();
   const router = useRouter();
-  console.log(user)
 
   const sendToSlack = async () => {
     try {

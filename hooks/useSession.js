@@ -27,7 +27,6 @@ const useSession = () => {
         setLoading(false);
         setLoggedIn(false);
       }
-      console.log(loggedIn)
     };
 
     fetchUser();
@@ -37,7 +36,6 @@ const useSession = () => {
   const logout = async () => {
     try {
       const res = await api.get('/api/auth/logout', { withCredentials: true });
-      console.log(res.data);
       setUser(null);
       setLoggedIn(false);
       router.push('/');
