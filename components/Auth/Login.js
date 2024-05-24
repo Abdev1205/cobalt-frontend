@@ -4,11 +4,13 @@ import Link from 'next/link'
 import Image from "next/image";
 import { LogoImage } from "@/public/assetsManager";
 import { nunitoSans } from "@/public/fonts";
+import { ApiUrl } from "@/utils/BaseUrl";
+
 const Login = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      window.location.href = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/google`;
+      window.location.href = `${ApiUrl}/api/auth/google`;
     } catch (error) {
       console.error('Error during Google login:', error);
     }
